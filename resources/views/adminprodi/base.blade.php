@@ -102,18 +102,25 @@
 							</li>
 
 							<li>
-								<a href="{{ URL::route('jumlah_peserta') }}">
-									<i class="menu-icon icon-tasks"></i>
-									Jumlah peserta
-								</a>
-							</li>
-
-							<li>
 								<a href="{{ URL::route('daftarmatkul') }}">
 									<i class="menu-icon icon-tasks"></i>
 									Daftar Mata Kuliah
 								</a>
-							</li>							
+							</li>	
+
+							<li>
+								<a href="#">
+									<i class="menu-icon icon-tasks"></i>
+									Perubahan Jadwal
+								</a>
+							</li>	
+
+							<li>
+								<a href="#">
+									<i class="menu-icon icon-tasks"></i>
+									Manajemen Ruang
+								</a>
+							</li>																				
 						</ul><!--/.widget-nav-->
 
 

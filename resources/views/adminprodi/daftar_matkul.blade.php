@@ -11,27 +11,32 @@
 	<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 		<thead>
 			<tr>
-				<th>Kode Mata Kuliah</th>
-				<th>Nama Mata Kuliah</th>
-				<th>SKS</th>
-				<th>Nama Dosen</th>
+				<th>Mata Kuliah</th>
+				<th>Dosen</th>
+				<th>Prodi</th>
 				<th>Jumlah Peserta</th>
 				<th>Action</th>				
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="gradeA">
-				<td>Gecko</td>
-				<td>Firefox 2.0</td>
-				<td>Win 98+ / OSX.2+</td>
-				<td class="center">1.8</td>
-				<td class="center">A</td>
+	
+ @foreach($daftar_matkul as $dsn)
+
+ 			<tr class="gradeX">
+				<td>{{$dsn->id_matkul}}</td>
+				<td>{{$dsn->id_dosen}}</td>
+				<td>{{$dsn->id_prodi}}</td>
+				<td>{{$dsn->jumlah_peserta}}</td>												
 				<td class="center">
-					<a class="btn btn-primary" href="#">Edit</a>
-					<a class="btn btn-primary" href="#">Delete</a>		
-				</td>				
+					<a class="btn btn-primary" href="{{ route('editdosen', $dsn->id_dosen) }}">Edit</a>
+					<a class="btn btn-primary" href="{{ route('hapusdosen', $dsn->id_dosen) }}">Delete</a>		
+				</td>		
 			</tr>
-		</tbody>
+
+  @endforeach
+
+
+		</tbody>		
 	</table>
 </div>
 

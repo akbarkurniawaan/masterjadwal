@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Matkul;
+use App\Daftar_matkul;
 use App\Dosen;
-use App\Jumlah_peserta;
+use App\Prodi;
 class adminprodiController extends Controller
 {
     //
@@ -73,18 +74,29 @@ class adminprodiController extends Controller
 
 	  	public function daftarmatkul()
 	{
+  		$daftar_matkul = Daftar_matkul::orderBy('created_at', 'desc')->get();			
   		$matkul = Matkul::orderBy('created_at', 'desc')->get();	
-
-		return view('adminprodi.daftar_matkul', compact('matkul'));
+  		$dosen = Dosen::orderBy('created_at', 'desc')->get();  	
+  		$prodi = Prodi::orderBy('created_at', 'desc')->get();  	
+		return view('adminprodi.daftar_matkul', compact('matkul','dosen','prodi','daftar_matkul'));
 	}
 
 	public function tambahdaftarmatkul()
 	{
   		$matkul = Matkul::orderBy('created_at', 'desc')->get();	
   		$dosen = Dosen::orderBy('created_at', 'desc')->get();  	
-  		$jumlah_peserta = Jumlah_peserta::orderBy('created_at', 'desc')->get();  					
-		return view('adminprodi_daftarmatkul.tambahdaftar_matkul', compact('matkul','dosen','jumlah_peserta'));
+  		$prodi = Prodi::orderBy('created_at', 'desc')->get();  	  		 					
+		return view('adminprodi_daftarmatkul.tambahdaftar_matkul', compact('matkul','dosen','prodi'));
 	}
+
+	public function simpandaftarmatkul(Request $request)
+	{
+		$input = $request->all();
+
+		Daftar_matkul::create($input);
+
+		return redirect('/adminprodi/matkul')->with('sukses', 'Berita sudah ditambah');
+	}	
 
 	public function dosen()
 	{
@@ -140,57 +152,7 @@ class adminprodiController extends Controller
 		return redirect('/adminprodi/dosen');
 	}	
 
-	public function jumlah_peserta()
-	{
-  		$jumlah_peserta = Jumlah_peserta::orderBy('created_at', 'desc')->get();
-			
-		return view('adminprodi.jumlah_peserta', compact('jumlah_peserta'));
-	}	
-
-	public function tambahjumlah_peserta()
-	{
-		return view('adminprodi_jlhpeserta.tambahjlhpeserta');
-	}
-
-	public function simpanjumlah_peserta(Request $request)
-	{
-		$input = $request->all();
-
-		jumlah_peserta::create($input);
-
-		return redirect('/adminprodi/jumlah_peserta')->with('sukses', 'Berita sudah ditambah');
-	}	
-
-	public function editjumlah_peserta($id_jumlah_peserta)
-	{
-        $editjumlah_peserta = Jumlah_peserta::find($id_jumlah_peserta);
-
-		return view('adminprodi_jlhpeserta.editjumlah_peserta', compact('editjumlah_peserta'));
-	}	
-
-	public function updatejumlah_peserta(Request $request, $id_jumlah_peserta)
-	{
-		$jumlah_peserta = Jumlah_peserta::find($id_jumlah_peserta);
-		$input = $request->all();		
-
-		$jumlah_peserta->update($input);	
 
 
-		return redirect('/adminprodi/jumlah_peserta')->with('sukses', 'Berita sudah diupdate');
 
-	}
-
-	public function hapusjumlah_peserta($id_jumlah_peserta)
-	{
-		$jumlah_peserta = Jumlah_peserta::find($id_jumlah_peserta);
-
-        return view('adminprodi_jlhpeserta.tampildeletejumlah_peserta', compact('jumlah_peserta'));
-	}	
-
-	public function deletejumlah_peserta($id_jumlah_peserta)
-	{
-		$jumlah_peserta = Jumlah_peserta::find($id_jumlah_peserta);
-		$jumlah_peserta->delete();
-		return redirect('/adminprodi/jumlah_peserta');
-	}		
 }

@@ -15,6 +15,8 @@
 
 Route::get('/', array('as'=>'beranda', 'uses'=> 'WelcomeController@beranda'));
 
+Route::get('pilihjadwal', array('as'=>'pilihjadwal', 'uses'=>'JadwalController@pilihjadwal'));
+
 Route::get('jadwal', array('as'=>'jadwal', 'uses'=>'JadwalController@jadwal'));
 
 Route::get('pengelolaan', array('as'=>'pengelolaan', 'uses'=>'PengelolaanController@pengelolaan'));
@@ -92,6 +94,14 @@ Route::delete('upt/ruangan/{id_ruangan}/delete', array('as'=>'deleteruangan', 'u
 Route::get('upt/penjadwalan', 
 			['as'=>'penjadwalan',
 			'uses' =>'UPTController@penjadwalan']);
+
+Route::get('upt/perubahanjadwal', 
+			['as'=>'perubahanjadwal',
+			'uses' =>'UPTController@perubahanjadwal']);
+
+Route::get('upt/ubahpassword', 
+			['as'=>'ubahpassword',
+			'uses' =>'UPTController@ubahpassword']);
 /* upt */
 
 
@@ -146,22 +156,6 @@ Route::get('adminprodi/dosen/{id_dosen}/delete', array('as'=>'hapusdosen', 'uses
 Route::delete('adminprodi/dosen/{id_dosen}/delete', array('as'=>'deletedosen', 'uses'=>'adminprodiController@deletedosen'));
 
 
-Route::get('adminprodi/jumlah_peserta', 
-			['as'=>'jumlah_peserta',
-			'uses' =>'adminprodiController@jumlah_peserta']);
 
-Route::get('adminprodi/tambahjumlah_peserta', 
-			['as'=>'tambahjumlah_peserta',
-			'uses' =>'adminprodiController@tambahjumlah_peserta']);
-
-Route::post('adminprodi/simpanjumlah_peserta', array('as'=>'simpanjumlah_peserta', 'uses'=>'adminprodiController@simpanjumlah_peserta'));
-
-Route::get('adminprodi/editjumlah_peserta/{id_jumlah_peserta}', array('as'=>'editjumlah_peserta', 'uses'=>'adminprodiController@editjumlah_peserta'));
-
-Route::patch('adminprodi/updatejumlah_peserta/{id_jumlah_peserta}', array('as'=>'updatejumlah_peserta', 'uses'=>'adminprodiController@updatejumlah_peserta'));
-
-Route::get('adminprodi/jumlah_peserta/{id_jumlah_peserta}/delete', array('as'=>'hapusjumlah_peserta', 'uses'=>'adminprodiController@hapusjumlah_peserta'));
-
-Route::delete('adminprodi/jumlah_peserta/{id_jumlah_peserta}/delete', array('as'=>'deletejumlah_peserta', 'uses'=>'adminprodiController@deletejumlah_peserta'));
 
 /* admin prodi */

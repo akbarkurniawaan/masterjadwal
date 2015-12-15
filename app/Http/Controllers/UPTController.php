@@ -183,5 +183,15 @@ class UPTController extends Controller
 	public function penjadwalan()
 	{
 		return view('upt.penjadwalan');
-	}			
+	}		
+
+	public function perubahanjadwal()
+	{
+		return view('upt.perubahanjadwal');
+	}
+
+	public function ubahpassword()
+	{
+		return view('upt.ubahpassword');
+	}	
 }

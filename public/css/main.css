@@ -1,0 +1,198 @@
+@import url('./bootstrap.css');
+@import	url('./navbar-fixed-top.css');
+@import url('./slider.css');
+@import url('./datepicker.css');
+@import "datepicker";
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/Quicksand-Regular.woff") format('woff');
+}
+
+@font-face {
+	font-family: "Geometric";
+    src: url("../fonts/Geometric.ttf") format('truetype');
+}
+
+/*Validasi*/
+#error{
+	color:red;
+	font-size:12px;
+	display:none;
+}
+
+.needsfilled {
+	border-color:red;
+	color:white;
+}
+
+/*Akhir Validasi*/
+body{
+	background-color: #fff; 
+	/*background-image:
+	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+	linear-gradient(#eee .1em, transparent .1em);*/
+	background-size: 100% 1.2em;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+	font-family: Geometric;
+	color: #FFF;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+div.row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: darkturquoise;
+}
+
+div.navbar.navbar-default.navbar-fixed-top {
+	background-color: #EDEDED;
+}
+
+.isi{
+	padding-top: 6%;
+}
+
+body {
+	min-height: 100%;
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.social-media-item{
+	float: left;
+	padding-right: 5px;
+}
+
+.social-media-item img{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray; /* IE 6-9 */
+}
+
+.social-media-item img:hover{
+	-webkit-filter:grayscale(0);
+	-moz-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	filter: grayscale(0);
+	filter: none; /* IE 6-9 */
+}
+
+.nav li:hover{
+	background-color: yellow;
+}
+
+.container .jumbotron {
+	border-radius: 0px;
+	background-color: moccasin;
+	
+}
+
+.container .jumbotron h1 {
+	font-family: Quicksand;
+}
+
+.alamat{
+	clear: both;
+	font-family: Quicksand;
+	background-color: rgb(150, 150, 150);
+	color: white;
+	padding-top: 5px;
+}
+
+.container .jumbotron {
+	padding:10px;
+	width: 100%; 
+	float: left;
+}
+
+.latar{
+	background-color: rgba(224, 224, 224, 0.31);
+	padding: 40px;
+	margin-bottom: 10px;
+	font-family: geometric;
+	font-size: medium;
+	float: left;
+	width: 100%;
+}
+
+td { 
+    padding: 10px;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+	border-top: 0px;
+}
+
+
+
+@media (min-width: 273px) and (max-width: 370px){
+	.container .jumbotron , .latar{
+		margin-top: 92px;
+	}
+	.navbar-default .navbar-brand{
+		font-size: 2em;
+	}
+}
+
+@media (min-width:273px) and (max-width:813px){
+	body{
+			background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 0px, transparent 0), linear-gradient(#eee .1em, transparent .1em);
+		}
+}
+
+.lihat-data{
+	font-size: 15px;
+}
+
+.info th{
+	text-align: center;
+}
+
+.input-date{
+	cursor: pointer;
+}
+
+.table-full{
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+
+/*.input-group-addon, .input-group-btn {
+	width: 10%;
+}*/
+
+/*Filter*/
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+/*Akhir Filter*/
+
+.latar-logout{
+	height: 325px;
+}

@@ -118,6 +118,20 @@
 									Penjadwalan
 								</a>
 							</li>
+
+							<li>
+								<a href="{{ URL::route('perubahanjadwal') }}">
+									<i class="menu-icon icon-tasks"></i>
+									Perubahan Jadwal
+								</a>
+							</li>	
+
+							<li>
+								<a href="{{ URL::route('ubahpassword') }}">
+									<i class="menu-icon icon-tasks"></i>
+									Ubah Password
+								</a>
+							</li>	
 						</ul><!--/.widget-nav-->
 
 

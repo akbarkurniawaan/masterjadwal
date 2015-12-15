@@ -13,5 +13,10 @@ class JadwalController extends Controller
 	{
 
 		return view('guest.jadwal');
-	}      
+	}    
+	  	public function pilihjadwal()
+	{
+
+		return view('guest.pilihjadwal');
+	}
 }

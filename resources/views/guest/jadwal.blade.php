@@ -1,57 +1,53 @@
- @extends('guest.base2')
+ @extends('guest.base')
 @section('content')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div class="container-fluid">
-  <div class="row">
-
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">Jadwal Perkuliahan</div>
-        <div class="panel-body">
-  <div class="table-responsive">                    
-          <table  id="example1"  class="table table-striped course_table">
-          <thead>
+    <div class="panel panel-warning">
+             <div class="panel-heading">
+             Selamat Datang
+             </div>
+             <div class="panel-body">
+       
+      <div class="table-responsive">
+            <table class="table table-hover">
+            <thead>
             <tr>          
-              <th>Nama Mata Kuliah</th>
-              <th>SKS</th> 
-              <th>Prodi</th>
-              <th>Dosen Pengampu</th>
               <th>Hari</th>
-              <th>Jam Masuk</th> 
-              <th>Jam Keluar</th>
-              <th>Ruangan</th>                
+              <th>Jam</th> 
+              <th>Mata Kuliah</th>
+              <th>SKS</th>
+              <th>Ruangan</th>
+              <th>Dosen</th> 
+              <th>Program Studi</th>               
             </tr>
-          </thead>
-          <tbody>
+      </thead>
+      <tbody>
             <tr>          
-              <td>Proyek Kelompok</td>
-              <td>2</td>
-              <td>Teknik Informatika</td>     
-              <td>Mr. X</td>
               <td>Senin</td>
               <td>08:00</td>
-              <td>13:00</td>     
-              <td>A-16</td>              
+              <td>Kalkulus</td>     
+              <td>2</td>
+              <td>A16</td>
+              <td>Jack Ryan</td>
+              <td>Teknik Elektro</td>              
             </tr>
             <tr>          
-              <td>Proyek Kelompok</td>
-              <td>2</td>
-              <td>Teknik Informatika</td>     
-              <td>Mr. X</td>
               <td>Senin</td>
-              <td>08:00</td>
-              <td>13:00</td>     
-              <td>A-16</td>              
+              <td>12:00</td>
+              <td>Bahasa Indonesia</td>     
+              <td>3</td>
+              <td>A16</td>
+              <td>Iron Man</td>
+              <td>Teknik Elektro</td>              
             </tr>            
-          </tbody>
-          </table>    
-    </div>
+      </tbody>
+            </table>
+            </div>
+       
+             <div class="panel-footer halus">
+             **Hubungi admin jika ada kesalahan jadwal
+             </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+      
+    <br><br><br><br><br><br>
  
 @stop   
 
